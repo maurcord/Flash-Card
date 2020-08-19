@@ -27,7 +27,7 @@ Each object should have the info for the drink as so:
 
 Let drinks = [{Name:"Old Fashioned" Image: "img.jpg" Style: "Stirred" Ingredients: "Sugar, water, bitters, whiskey"}]
 
-Create 5 Divs for each Cocktail. On the front of the Div, place an image of the cocktail. On the back of the "card"(div), have the information listed.
+Create 5 Divs for each Cocktail. On the front of the Div, place an image of the cocktail. On the back of the "card"(div), have the information listed. We need to add an event listener "Click" to the div as well. We need to create a FRONT DIV and a BACK DIV.
 
 Create 5 div classes for each drink, then use query selector to grab the classes and assign them to an element.
 Once you have the element for the classes, create an event listener for each div so that when you click the div, the ingredients will show on the "back" of the card..

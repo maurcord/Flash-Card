@@ -26,4 +26,21 @@ let drinks = [
     ingredients:"whiskey,vermouth,bitters"
 }
 ];
-console.log(drinks[0])
+console.log(drinks[0].name)
+
+let cardContainers = document.querySelectorAll(".cards") // This then becomes an array.
+console.log(cardContainers)
+
+function cardListener(){
+    console.log(this) // this refers to the specific card that its attached to.
+}
+
+//Created a loop, that will create DIVs for the front and back card.
+for (let i =0;i<cardContainers.length;i++){
+    let cardFront = document.createElement('div')
+    let cardInformation = document.createTextNode(drinks[i].name)
+    cardFront.appendChild(cardInformation)
+    cardContainers[i].appendChild(cardFront) // cardContainers need [i] because it is an array.
+    cardContainers[i].addEventListener("click", cardListener)
+}
+
