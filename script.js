@@ -57,14 +57,33 @@ let cardContainers = document.querySelectorAll(".cards") // This then becomes an
 console.log(cardContainers)
 
 function cardListener(){
-    console.log(this) // this refers to the specific card that its attached to.
-}
+    console.log(this.childNodes[0])
 
+    // childNodes[1]is the front of the card
+    // childNodes[0] is the back of the card
+    // if the front of the card is showing, then the back card display is none.
+    // if the back of the card is showing, then the front display is none.
+  if (this.childNodes[0].style.display == "none") { 
+  this.childNodes[1].style.display = "block";
+  } 
+  else if (this.childNodes[1].style.display = "none"){
+        this.childNodes[0].style.display = "block";
+    }
+  }
+ 
+
+
+// this refers to the specific card that its attached to.
 //Created a loop, that will create DIVs for the front and back card.
 for (let i =0;i<cardContainers.length;i++){
     let cardFront = document.createElement('div')
     let cardInformation = document.createTextNode(drinks[i].name)
-    
+    let cardBack = document.createElement('div')
+    let cardBackInformation = document.createTextNode(drinks[i].ingredients)
+    cardBack.appendChild(cardBackInformation)
+    cardContainers[i].appendChild(cardBack)
+    cardBack.style.height= "100%"
+    cardBack.style.display= "none"
     // Here were are adding images to front 'front' of the div.
     // We are using string interpolation to go through the drink array:"image"
     // and adding backgroundImages
@@ -73,6 +92,7 @@ for (let i =0;i<cardContainers.length;i++){
     cardFront.style.backgroundSize = "cover"
     cardFront.style.height= "100%"
     cardFront.style.backgroundPosition= "center"
+    cardFront.style.display= "block"
     cardFront.appendChild(cardInformation)
     cardContainers[i].appendChild(cardFront) // cardContainers need [i] because it is an array.
     cardContainers[i].addEventListener("click", cardListener)
