@@ -64,6 +64,15 @@ function cardListener(){
 for (let i =0;i<cardContainers.length;i++){
     let cardFront = document.createElement('div')
     let cardInformation = document.createTextNode(drinks[i].name)
+    
+    // Here were are adding images to front 'front' of the div.
+    // We are using string interpolation to go through the drink array:"image"
+    // and adding backgroundImages
+    // Here we are styling the images and position.
+    cardFront.style.backgroundImage = `url(${drinks[i].image})`
+    cardFront.style.backgroundSize = "cover"
+    cardFront.style.height= "100%"
+    cardFront.style.backgroundPosition= "center"
     cardFront.appendChild(cardInformation)
     cardContainers[i].appendChild(cardFront) // cardContainers need [i] because it is an array.
     cardContainers[i].addEventListener("click", cardListener)
