@@ -63,11 +63,15 @@ function cardListener(){
     // childNodes[0] is the back of the card
     // if the front of the card is showing, then the back card display is none.
     // if the back of the card is showing, then the front display is none.
-  if (this.childNodes[0].style.display == "none") { 
-  this.childNodes[1].style.display = "block";
+  if (this.childNodes[1].style.display == "block") { 
+  this.childNodes[0].style.display = "block";
+  this.childNodes[1].style.display= "none"
+  // childNodes[1] will now be off
   } 
-  else if (this.childNodes[1].style.display = "none"){
-        this.childNodes[0].style.display = "block";
+  else {
+        // childNodes[0] will now be off
+        this.childNodes[0].style.display = "none";
+        this.childNodes[1].style.display = 'block'
     }
   }
  
