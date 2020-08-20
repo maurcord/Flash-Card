@@ -101,7 +101,7 @@ img {
     display: none;
 } */
 
-@media (max-width: 575.98px) {
+@media screen and (max-width: 575.98px) {
     .cards {
        border: 10px solid red;
        
@@ -109,15 +109,114 @@ img {
     .container {
         flex-direction: column;
     }
+    h1 {
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+        display: block
+    }
+    p {
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+        display: block;
+    }
+    
+    
+    body {
+        background-image: url('./saloon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inconsolata', monospace;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        display: block;
+    }
+    .card1Container {
+        display: block;
+    }
+    
+    .container {
+        display: block;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        align-content: center;
+       
+    }
+    .cards {
+        background: black;
+        height: 400px;
+        width: 300px;
+        border: 10px solid black;
+        display: block;
+    
+    }
+    .button-container{
+        height: 100px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+        align-content: center;
+        
+    }
+    .button-red {
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+        margin: 20px;
+        background-color: red;
+        display: inline-block;
+    }
+    .button-green {
+        background-color: green;
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+        margin: 20px;
+        display: inline-block;
+    }
+    img {
+        height: 200px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    .score {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end    
+    }
+    .header-score {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-right: 200px;
+    }
+    .level-header {
+        display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
+      margin: 10px;
+    }
 
 }
 
 
-// Small devices (landscape phones, less than 768px)
+ /* Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { ... }
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
+@media (max-width: 1199.98px) { ... } */
