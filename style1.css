@@ -7,7 +7,15 @@ p {
 
 
 body {
-    background-color: grey;
+    background-image: url("./barback.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+
 }
 
 .container {
@@ -20,7 +28,7 @@ body {
    
 }
 .cards {
-    background: yellow;
+    background: black;
     height: 400px;
     width: 300px;
     border: 10px solid black;
@@ -31,15 +39,17 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
     
-   
-
 }
 .button-red {
     height: 50px;
     width: 50px;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
     background-color: red;
 }
 .button-green {
@@ -47,7 +57,7 @@ body {
     height: 50px;
     width: 50px;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
 }
 img {
     height: 200px;
@@ -60,4 +70,19 @@ img {
     display: flex;
     flex-direction: column;
     justify-items: flex-end    
+}
+.header-score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-right: 200px;
+}
+.level-header {
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }

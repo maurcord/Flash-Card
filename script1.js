@@ -5,27 +5,28 @@ let drinks = [
     name:"Old Fashioned",
     image: "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg", 
     style: "stirred", 
-    ingredients: "sugar, water, bitters"
+    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'. Stir 20 times. Serve on ice. Garnish with orange twist. The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
 },
 {
     name:"Daiquiri", 
     image:"https://www.thecocktaildb.com/images/media/drink/mrz9091589574515.jpg", 
     style: "shaken",
-    ingredients:"sugar,lime,rum"
+    ingredients:"2 ounces of Rum, 3/4 ounce of fresh lime juice, 3/4 ounce of simple syrup. Shake and strain, serve up in a coupe. Garnish with a lime wheel. Named after the mining town in Cuba and championed by an American ex-pat engineer by the name of Jennings Cox in the early 1900's."
 },
 {   name:"Martini",
     image:"https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg",
     style:"stirred",
-    ingredients:"gin,vermouth,bitters"
-},{ name:"Collins",
+    ingredients:"2 ounces of Gin, 1 ounce of dry vermouth, 2 dashes of orange bitters. Stir 20 times, serve up in a coupe. Garnish with a lemon twist or olives. French or dry vermouth arrived in the United States in 1870's, and it was only natural that bartenders would start using this product as a subsitute for sweet or italian vermouth."
+},
+{ name:"Collins",
     image:"https://www.thecocktaildb.com/images/media/drink/qystvv1439907682.jpg",
     style: "highball",
-    ingredients:"gin,soda,lime"
-},{
-    name:"Manhattan",
+    ingredients:"2 ounces of Gin, 3/4 ounce of fresh lemon juice, 3/4 ounce of simple syrup. Shake and strain over ice in highball, top with club soda. First appeared in print in Jerry Thomas' Bartender Guide in 1876."
+},
+{   name:"Manhattan",
     image: "https://www.thecocktaildb.com/images/media/drink/hz7p4t1589575281.jpg",
     style:"stirred",
-    ingredients:"whiskey,vermouth,bitters"
+    ingredients:"2 ounces of whiskey, 1 ounce of sweet vermouth, 2 dashes of 'Angostura Bitters'. Stir 20 times, serve up in a coupe or on the rocks. Garnish with Luxardo cherry. First appeared in print in Harry Johnson's Bartender's manual in 1882."
 }
 ];
 console.log(drinks[0].name)
@@ -42,11 +43,19 @@ function addScore (){
     console.log(this)
     currentScore += 10
     score.innerHTML= currentScore
+    if(currentScore ===50){
+        alert('Congratulations, you passed!')
+    }
 }
 function deductScore (){
     console.log(this)
     currentScore -= 10
     score.innerHTML= currentScore
+}
+function resetScore () {
+    console.log(this)
+    currentScore = 0
+    score.innerHTML=currentScore
 }
 // Loops through all the red buttons, and adds event listener "click"
 // and then we add helper function "deduct score" that will deduct 10 points
