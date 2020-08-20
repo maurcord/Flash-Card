@@ -7,7 +7,7 @@ p {
 
 
 body {
-    background-image: url("./barback.webp");
+    background-image: url('./barback.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
