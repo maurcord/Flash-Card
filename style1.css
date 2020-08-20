@@ -19,6 +19,9 @@ body {
     color: white;
     text-shadow: 2px 2px 5px black;
 }
+.card1Container {
+    display: inline;
+}
 
 .container {
     display: flex;
@@ -53,6 +56,7 @@ body {
     padding: 20px;
     margin: 20px;
     background-color: red;
+    display: inline-block;
 }
 .button-green {
     background-color: green;
@@ -60,6 +64,7 @@ body {
     width: 50px;
     padding: 20px;
     margin: 20px;
+    display: inline-block;
 }
 img {
     height: 200px;
@@ -95,3 +100,24 @@ img {
 .youtube2 {
     display: none;
 } */
+
+@media (max-width: 575.98px) {
+    .cards {
+       border: 10px solid red;
+       
+    }
+    .container {
+        flex-direction: column;
+    }
+
+}
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
