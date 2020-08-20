@@ -45,6 +45,7 @@ function addScore (){
     score.innerHTML= currentScore
     if(currentScore ===50){
         alert('Congratulations, you passed!')
+        resetScore()
     }
 }
 function deductScore (){
@@ -86,8 +87,6 @@ function cardListener(){
         this.childNodes[1].style.display = 'block'
     }
   }
- 
-
 
 // this refers to the specific card that its attached to.
 //Created a loop, that will create DIVs for the front and back card.
