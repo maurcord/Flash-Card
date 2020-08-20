@@ -94,12 +94,12 @@ img {
   padding: 20px;
   margin: 10px;
 }
-/* .youtube1 {
+.youtube1 {
     display: none;
 }
 .youtube2 {
     display: none;
-} */
+}
 
 @media screen and (max-width: 575.98px) {
     .cards {
