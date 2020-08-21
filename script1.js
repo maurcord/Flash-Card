@@ -128,6 +128,7 @@ musicButton.addEventListener('click',function(){
     console.log(pageMusic)
     for( let i = 0;i < pageMusic.length;i++){
         pageMusic[i].volume = "0.0"
+        alert("what was wrong with the music i picked? :'( ")
     }
 
     
