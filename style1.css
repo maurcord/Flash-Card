@@ -2,7 +2,7 @@ h1 {
     text-align: center;
     text-shadow: 2px 2px 5px black;
 }
-p {
+h2 {
     text-align: center;
     text-shadow: 2px 2px 5px black;
 }
@@ -15,7 +15,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Inconsolata', monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 5px black;
 }
@@ -39,17 +39,14 @@ body {
     border: 10px solid black;
 
 }
-.button-container{
-    height: 100px;
-    width: 100%;
+ .rg-button-container{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
     align-content: center;
+    justify-self: center;
+    justify-content: center;
     
-}
+} 
 .button-red {
     height: 50px;
     width: 50px;
@@ -210,12 +207,110 @@ img {
 
 }
 
-
- /* Small devices (landscape phones, less than 768px)
+/* 
+Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
+ Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... } */
+ Large devices (desktops, less than 1200px) */
+
+@media screen and (max-width: 1199.98px) {
+    h1 {
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+    }
+    p {
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+    }
+    
+    
+    body {
+        background-image: url('./saloon.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inconsolata', monospace;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+    }
+    .card1Container {
+        display: inline;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        align-content: center;
+       
+    }
+    .cards {
+        background: black;
+        height: 400px;
+        width: 300px;
+        border: 10px solid black;
+    
+    }
+    .button-container{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+        align-content: center;
+        
+    }
+    .button-red {
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+        margin: 20px;
+        background-color: red;
+        display: inline-block;
+    }
+    .button-green {
+        background-color: green;
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+        margin: 20px;
+        display: inline-block;
+    }
+    img {
+        height: 200px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    .score {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end    
+    }
+    .header-score {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-right: 200px;
+    }
+    .level-header {
+        display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
+      margin: 10px;
+    }
+} 
