@@ -5,7 +5,7 @@ let drinks = [
     name:"Old Fashioned",
     image: "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg", 
     style: "stirred", 
-    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'. Stir 20 times. Serve on ice. Garnish with orange twist. The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
+    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'.Stir 20 times. Serve on ice. Garnish with orange twist. The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
 },
 {
     name:"Daiquiri", 
@@ -52,6 +52,10 @@ function deductScore (){
     console.log(this)
     currentScore -= 10
     score.innerHTML= currentScore
+    if(currentScore=== -50){
+        alert('You need to study!')
+        resetScore()
+    }
 }
 function resetScore () {
     console.log(this)
