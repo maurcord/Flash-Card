@@ -101,7 +101,7 @@ img {
     display: none;
 }
 
-@media screen and (max-width: 575.98px) {
+@media screen and (max-width: 375.98px) {
     .cards {
        border: 10px solid red;
        
@@ -112,7 +112,8 @@ img {
     h1 {
         text-align: center;
         text-shadow: 2px 2px 5px black;
-        display: block
+        display: block;
+        
     }
     p {
         text-align: center;
@@ -190,21 +191,19 @@ img {
     .score {
         display: flex;
         flex-direction: column;
-        justify-items: flex-end    
+        justify-content: center;   
+        align-content: center;
+        align-items: center;
     }
     .header-score {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-      margin-right: 200px;
+      flex-direction: column;
+      margin: 0 auto;
     }
     .level-header {
-        display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      align-content: center;
       padding: 20px;
       margin: 10px;
     }
