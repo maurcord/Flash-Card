@@ -5,28 +5,28 @@ let drinks = [
     name:"Old Fashioned",
     image: "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg", 
     style: "stirred", 
-    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'. Stir 20 times. Serve on ice. Garnish with orange twist. \n The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
+    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'. Stir 20 times. Serve on ice. Garnish with orange twist. <br><br><br>The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
 },
 {
     name:"Daiquiri", 
     image:"https://www.thecocktaildb.com/images/media/drink/mrz9091589574515.jpg", 
     style: "shaken",
-    ingredients:"2 ounces of Rum, 3/4 ounce of fresh lime juice, 3/4 ounce of simple syrup. Shake and strain, serve up in a coupe. Garnish with a lime wheel. Named after the mining town in Cuba and championed by an American ex-pat engineer by the name of Jennings Cox in the early 1900's."
+    ingredients:"2 ounces of Rum, 3/4 ounce of fresh lime juice, 3/4 ounce of simple syrup. Shake and strain, serve up in a coupe. Garnish with a lime wheel. <br><br><br>Named after the mining town in Cuba and championed by an American ex-pat engineer by the name of Jennings Cox in the early 1900's."
 },
 {   name:"Martini",
     image:"https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg",
     style:"stirred",
-    ingredients:"2 ounces of Gin, 1 ounce of dry vermouth, 2 dashes of orange bitters. Stir 20 times, serve up in a coupe. Garnish with a lemon twist or olives. French or dry vermouth arrived in the United States in 1870's, and it was only natural that bartenders would start using this product as a subsitute for sweet or italian vermouth."
+    ingredients:"2 ounces of Gin, 1 ounce of dry vermouth, 2 dashes of orange bitters. Stir 20 times, serve up in a coupe. Garnish with a lemon twist or olives.<br><br><br> French or dry vermouth arrived in the United States in 1870's, and it was only natural that bartenders would start using this product as a subsitute for sweet or italian vermouth."
 },
 { name:"Collins",
     image:"https://www.thecocktaildb.com/images/media/drink/qystvv1439907682.jpg",
     style: "highball",
-    ingredients:"2 ounces of Gin, 3/4 ounce of fresh lemon juice, 3/4 ounce of simple syrup. Shake and strain over ice in highball, top with club soda. First appeared in print in Jerry Thomas' Bartender Guide in 1876."
+    ingredients:"2 ounces of Gin, 3/4 ounce of fresh lemon juice, 3/4 ounce of simple syrup. Shake and strain over ice in highball, top with club soda.<br><br><br> First appeared in print in Jerry Thomas' Bartender Guide in 1876."
 },
 {   name:"Manhattan",
     image: "https://www.thecocktaildb.com/images/media/drink/hz7p4t1589575281.jpg",
     style:"stirred",
-    ingredients:"2 ounces of whiskey, 1 ounce of sweet vermouth, 2 dashes of 'Angostura Bitters'. Stir 20 times, serve up in a coupe or on the rocks. Garnish with Luxardo cherry. First appeared in print in Harry Johnson's Bartender's manual in 1882."
+    ingredients:"2 ounces of whiskey, 1 ounce of sweet vermouth, 2 dashes of 'Angostura Bitters'. Stir 20 times, serve up in a coupe or on the rocks. Garnish with Luxardo cherry.<br><br><br> First appeared in print in Harry Johnson's Bartender's manual in 1882."
 }
 ];
 console.log(drinks[0].name)
@@ -100,7 +100,8 @@ for (let i =0;i<cardContainers.length;i++){
     let cardFront = document.createElement('div')
     let cardInformation = document.createTextNode(drinks[i].name)
     let cardBack = document.createElement('div')
-    let cardBackInformation = document.createTextNode(drinks[i].ingredients)
+    let cardBackInformation = document.createElement('p')
+    cardBackInformation.innerHTML = drinks[i].ingredients
     cardBack.appendChild(cardBackInformation)
     cardContainers[i].appendChild(cardBack)
     cardBack.style.height= "100%"
@@ -135,7 +136,7 @@ unMute.addEventListener('click', function(){
     let pageMusic = document.querySelectorAll("audio")
     console.log(pageMusic)
     for( let i = 0;i < pageMusic.length;i++){
-        pageMusic[i].volume = "0.9" 
+        pageMusic[i].volume = "0.9"
     }
    
 })
