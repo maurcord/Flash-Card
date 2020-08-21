@@ -42,19 +42,19 @@ greenButton[i].addEventListener("click", addScore)
 function addScore (){
     alert("Correct!")
     console.log(this)
-    currentScore += 10
+    currentScore += 20
     score.innerHTML= currentScore
-    if(currentScore ===50){
-        alert('Congratulations, you passed!')
+    if(currentScore ===100){
+        alert('Congratulations, you passed! You`re now a bartender!')
         resetScore()
     }
 }
 function deductScore (){
     alert("Wrong!")
     console.log(this)
-    currentScore -= 10
+    currentScore -= 20
     score.innerHTML= currentScore
-    if(currentScore=== -50){
+    if(currentScore=== -100){
         alert('You need to study!')
         resetScore()
     }
