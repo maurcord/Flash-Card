@@ -38,6 +38,7 @@ body {
     height: 400px;
     width: 300px;
     border: 10px solid black;
+    text-align: center;
 
 }
  .rg-button-container{
@@ -98,6 +99,10 @@ img {
 .youtube2 {
     display: none;
 }
+.audio-button{
+    margin: 0 auto;
+    display: flex;
+    }
 
 @media screen and (max-width: 375.98px) {
     .cards {
@@ -215,15 +220,13 @@ img {
     }
 
 }
-
-/* 
-Small devices (landscape phones, less than 768px)
+/* Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
  Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { ... }
 
- Large devices (desktops, less than 1200px) */
+ Large devices (desktops, less than 1200px) */ */
 
 /* @media screen and (max-width: 1199.98px) {
     h1 {
@@ -321,5 +324,4 @@ Small devices (landscape phones, less than 768px)
       align-items: center;
       padding: 20px;
       margin: 10px;
-    }
-}  */
+    } */

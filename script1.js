@@ -119,3 +119,10 @@ for (let i =0;i<cardContainers.length;i++){
     cardContainers[i].addEventListener("click", cardListener)
 }
 
+let musicButton = document.querySelector('.audio-button')
+console.log(musicButton)
+musicButton.addEventListener('click',function(){
+    alert("Do you want to mute this annoying background music lol")
+    alert("sorry lol")
+})
+
