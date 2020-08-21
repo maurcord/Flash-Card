@@ -104,7 +104,11 @@ img {
     display: flex;
     margin-bottom: 10px;
     }
-
+.audio-button2{
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+}
 
 @media screen and (max-width: 375.98px) {
     .cards {

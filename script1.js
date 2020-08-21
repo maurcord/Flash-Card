@@ -5,7 +5,7 @@ let drinks = [
     name:"Old Fashioned",
     image: "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg", 
     style: "stirred", 
-    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'.Stir 20 times. Serve on ice. Garnish with orange twist. The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
+    ingredients: "2 ounces of Whiskey, 1/2 ounce of simple syrup, 2 dashes of 'Angostura Bitters'. Stir 20 times. Serve on ice. Garnish with orange twist. \n The oldest recipe for this drink appears in George Kappeler's Modern American Drinks, published in 1895."
 },
 {
     name:"Daiquiri", 
@@ -40,7 +40,7 @@ for(let i=0;i < greenButton.length;i++){
 greenButton[i].addEventListener("click", addScore)
 }
 function addScore (){
-    alert("Correct!")
+    alert("Good Job!")
     console.log(this)
     currentScore += 20
     score.innerHTML= currentScore
@@ -50,7 +50,7 @@ function addScore (){
     }
 }
 function deductScore (){
-    alert("Wrong!")
+    alert("Keep Studying!")
     console.log(this)
     currentScore -= 20
     score.innerHTML= currentScore
@@ -122,15 +122,21 @@ for (let i =0;i<cardContainers.length;i++){
 let musicButton = document.querySelector('.audio-button')
 console.log(musicButton)
 musicButton.addEventListener('click',function(){
-    alert("Do you want to mute this annoying background music lol")
-    alert("sorry lol")
     let pageMusic = document.querySelectorAll("audio")
     console.log(pageMusic)
     for( let i = 0;i < pageMusic.length;i++){
         pageMusic[i].volume = "0.0"
-        alert("what was wrong with the music i picked? :'( ")
     }
+})
 
-    
+let unMute = document.querySelector(".audio-button2")
+console.log(unMute)
+unMute.addEventListener('click', function(){
+    let pageMusic = document.querySelectorAll("audio")
+    console.log(pageMusic)
+    for( let i = 0;i < pageMusic.length;i++){
+        pageMusic[i].volume = "0.9" 
+    }
+   
 })
 
