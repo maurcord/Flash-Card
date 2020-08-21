@@ -133,6 +133,9 @@ img {
     }
     .card1Container {
         display: block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
     
     .container {
@@ -150,6 +153,10 @@ img {
         width: 300px;
         border: 10px solid black;
         display: block;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
     
     }
     .button-container{
