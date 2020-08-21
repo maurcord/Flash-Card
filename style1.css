@@ -18,6 +18,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-shadow: 2px 2px 5px black;
+    font-family: 'Tauri', sans-serif;
 }
 .card1Container {
     display: inline;
@@ -129,6 +130,8 @@ img {
         color: white;
         text-shadow: 2px 2px 5px black;
         display: block;
+        font-family: 'Tauri', sans-serif;
+
     }
     .card1Container {
         display: block;

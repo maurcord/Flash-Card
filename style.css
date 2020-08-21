@@ -33,11 +33,10 @@ p {
 }
 @media screen and (max-width: 375.98px) {
     body{
-        background-size: cover;
         background-repeat: repeat;
         text-shadow: 10px 10px 15px red;
         display: block;
-        height: 100%;
+        
     }
     h1 {
         text-align: center;
@@ -59,6 +58,9 @@ p {
         border: 20px solid black;
         margin: 0 auto;
         margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
 
 }
