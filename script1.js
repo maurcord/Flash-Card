@@ -124,5 +124,12 @@ console.log(musicButton)
 musicButton.addEventListener('click',function(){
     alert("Do you want to mute this annoying background music lol")
     alert("sorry lol")
+    let pageMusic = document.querySelectorAll("audio")
+    console.log(pageMusic)
+    for( let i = 0;i < pageMusic.length;i++){
+        pageMusic[i].volume = "0.0"
+    }
+
+    
 })
 
