@@ -36,6 +36,7 @@ p {
         background-repeat: repeat;
         text-shadow: 10px 10px 15px red;
         display: block;
+        font-family: 'Tauri', sans-serif;
         
     }
     h1 {
