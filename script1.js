@@ -120,24 +120,24 @@ for (let i =0;i<cardContainers.length;i++){
     cardContainers[i].addEventListener("click", cardListener)
 }
 
-let musicButton = document.querySelector('.audio-button')
-console.log(musicButton)
-musicButton.addEventListener('click',function(){
-    let pageMusic = document.querySelectorAll("audio")
-    console.log(pageMusic)
-    for( let i = 0;i < pageMusic.length;i++){
-        pageMusic[i].volume = "0.0"
-    }
-})
+// let musicButton = document.querySelector('.audio-button')
+// console.log(musicButton)
+// musicButton.addEventListener('click',function(){
+//     let pageMusic = document.querySelectorAll("audio")
+//     console.log(pageMusic)
+//     for( let i = 0;i < pageMusic.length;i++){
+//         pageMusic[i].volume = "0.0"
+//     }
+// })
 
-let unMute = document.querySelector(".audio-button2")
-console.log(unMute)
-unMute.addEventListener('click', function(){
-    let pageMusic = document.querySelectorAll("audio")
-    console.log(pageMusic)
-    for( let i = 0;i < pageMusic.length;i++){
-        pageMusic[i].volume = "0.9"
-    }
+// let unMute = document.querySelector(".audio-button2")
+// console.log(unMute)
+// unMute.addEventListener('click', function(){
+//     let pageMusic = document.querySelectorAll("audio")
+//     console.log(pageMusic)
+//     for( let i = 0;i < pageMusic.length;i++){
+//         pageMusic[i].volume = "0.9"
+//     }
    
-})
+// })
 
