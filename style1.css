@@ -126,6 +126,7 @@ img {
         height: 100%;
         margin: 0;
         padding: 0;
+
         color: white;
         text-shadow: 2px 2px 5px black;
         display: block;
@@ -215,7 +216,7 @@ Small devices (landscape phones, less than 768px)
 
  Large devices (desktops, less than 1200px) */
 
-@media screen and (max-width: 1199.98px) {
+/* @media screen and (max-width: 1199.98px) {
     h1 {
         text-align: center;
         text-shadow: 2px 2px 5px black;
@@ -312,4 +313,4 @@ Small devices (landscape phones, less than 768px)
       padding: 20px;
       margin: 10px;
     }
-} 
+}  */
