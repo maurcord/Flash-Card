@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 10px 10px 15px red;
+    font-family: 'Tauri', sans-serif;
 
 }
 h1 {
