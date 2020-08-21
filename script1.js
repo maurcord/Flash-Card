@@ -45,7 +45,7 @@ function addScore (){
     currentScore += 20
     score.innerHTML= currentScore
     if(currentScore ===100){
-        alert('Congratulations, you passed! You`re now a bartender!')
+        alert("Congratulations, you passed! Cheers! You're now an official bartender! Please drink responsibly")
         resetScore()
     }
 }
