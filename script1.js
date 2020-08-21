@@ -40,6 +40,7 @@ for(let i=0;i < greenButton.length;i++){
 greenButton[i].addEventListener("click", addScore)
 }
 function addScore (){
+    alert("Correct!")
     console.log(this)
     currentScore += 10
     score.innerHTML= currentScore
@@ -49,6 +50,7 @@ function addScore (){
     }
 }
 function deductScore (){
+    alert("Wrong!")
     console.log(this)
     currentScore -= 10
     score.innerHTML= currentScore
