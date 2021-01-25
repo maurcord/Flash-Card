@@ -40,7 +40,7 @@ for(let i=0;i < greenButton.length;i++){
 greenButton[i].addEventListener("click", addScore)
 }
 function addScore (){
-    alert("Good Job!")
+    // alert("Good Job!")
     console.log(this)
     currentScore += 20
     score.innerHTML= currentScore
@@ -50,12 +50,12 @@ function addScore (){
     }
 }
 function deductScore (){
-    alert("Keep Studying!")
+    // alert("Keep Studying!")
     console.log(this)
     currentScore -= 20
-    score.innerHTML= currentScore
+    score.innerHTML= currentScores
     if(currentScore=== -100){
-        alert('You need to study!')
+        // alert('You need to study!')
         resetScore()
     }
 }
@@ -75,7 +75,7 @@ let cardContainers = document.querySelectorAll(".cards") // This then becomes an
 console.log(cardContainers)
 
 function cardListener(){
-    console.log(this.childNodes[0])
+ console.log(this.childNodes[0])
     
 
     // childNodes[1]is the front of the card
@@ -104,15 +104,18 @@ for (let i =0;i<cardContainers.length;i++){
     cardBackInformation.innerHTML = drinks[i].ingredients
     cardBack.appendChild(cardBackInformation)
     cardContainers[i].appendChild(cardBack)
-    cardBack.style.height= "100%"
+    cardBack.style.height= "300px"
+    cardBack.style.width="210px"
     cardBack.style.display= "none"
+    cardBack.style.backgroundColor='red'
+    cardFront.style.borderRadius= "15px"
     // Here were are adding images to front 'front' of the div.
     // We are using string interpolation to go through the drink array:"image"
     // and adding backgroundImages
     // Here we are styling the images and position.
     cardFront.style.backgroundImage = `url(${drinks[i].image})`
     cardFront.style.backgroundSize = "cover"
-    cardFront.style.height= "100%"
+    cardFront.style.height= "300px"
     cardFront.style.backgroundPosition= "center"
     cardFront.style.display= "block"
     cardFront.appendChild(cardInformation)
