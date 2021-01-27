@@ -19,53 +19,57 @@
     <div class="header-score">
       <h1 class="score">000</h1>
     </div>
-    
+
+<p id="demo">00</p>
+<button onclick="clock(); document.getElementById('demo').innerHTML='60';">Start counter</button>
+<button onclick="clearInterval(myTimer);">Stop counter</button>
+<button onclick="">reset counter</button>
 </header>
 <body>
-  <!-- <img src="headshot.jpg" alt="headshot"> -->
+ <div class="ingredients-title">
   <h3>What are the ingredients in each cocktail, and what is the method of preparation? Check the back of the card! If your answer is correct, hit the green button!</h3>
-  <!-- <button class="audio-button">Mute Music</button>  
-  <button class="audio-button2">UnMute Music</button>  -->
+  </div>
+ 
   <div class="container">
     
       <div class="card1Container">
         <div class="cards"></div>
           <div class="rg-button-container">
-            <div class="button-green"></div>
-            <div class="button-red"></div>
+             <div id="quiz"></div>
+            <div id="results"></div>
           </div>
       </div>
       
       <div class="card2Container">
         <div class="cards"></div>
         <div class="rg-button-container">
-          <div class="button-green"></div>
-          <div class="button-red"></div>
+          <div id="quiz2"></div>
+          <div id="results"></div>
         </div>
       </div>
       <div class="card3Container">
         <div class="cards"></div>
         <div class="rg-button-container">
-          <div class="button-green"></div>
-          <div class="button-red"></div>
+          <div id="quiz"></div>
+          <div id="results"></div>
         </div>
       </div>
       <div class="card4Container">
         <div class="cards"></div>
         <div class="rg-button-container">
-          <div class="button-green"></div>
-          <div class="button-red"></div>
+          <div id="quiz"></div>
+          <div id="results"></div>
         </div>
       </div>
       <div class="card5Container">
         <div class="cards"></div>
         <div class="rg-button-container">
-          <div class="button-green"></div>
-          <div class="button-red"></div>
+           <div id="quiz"></div>
+            <div id="results"></div>
         </div>
       </div>
   </div>
-
+<button id="submit">Get Results</button>
 
 <!-- <button class="buttAudioStart">Start Music</button>
 <button class="buttAudioStop">Stop Music</button> -->

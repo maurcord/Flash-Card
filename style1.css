@@ -8,16 +8,61 @@ h2 {
 }
 
 body {
-  background-image: url("./saloon.jpg");
+  background-image: url("./barback.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: center;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  text-shadow: 2px 2px 5px black;
+  /* text-shadow: 2px 2px 5px black; */
   font-family: "Tauri", sans-serif;
+}
+.question {
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+}
+.answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+label {
+  margin: 10px;
+}
+#submit {
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #297;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#submit:hover {
+  background-color: #3a8;
+}
+
+.ingredients-title {
+  display: flex;
+  width: 700px;
+  height: 100px;
+  border: 5px solid black;
+  color: black;
+  background-color: white;
+  border-radius: 18px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
 }
 .card1Container {
   display: flex;
@@ -57,7 +102,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
   border-radius: 5px;
@@ -72,12 +117,24 @@ body {
 }
 .rg-button-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
   justify-self: center;
   justify-content: center;
-  border: 2px solid white;
+  border: 2px solid blue;
+  background-color: white;
+  color: black;
   border-radius: 5px;
+  margin-bottom: 15px;
+  width: 50%;
+  height: 50%;
+}
+.quiz {
+  padding: 10px;
+  margin: 10px;
+}
+.results {
+  padding: 10px;
 }
 .button-red {
   height: 10px;

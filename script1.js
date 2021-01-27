@@ -53,15 +53,15 @@ function deductScore (){
     // alert("Keep Studying!")
     console.log(this)
     currentScore -= 20
-    score.innerHTML= currentScores
-    if(currentScore=== -100){
-        // alert('You need to study!')
+    score.innerHTML= currentScore
+    if(currentScore === -100){
+        alert('You need to study!')
         resetScore()
     }
 }
 function resetScore () {
     console.log(this)
-    currentScore = 0
+    currentScore === 0
     score.innerHTML=currentScore
 }
 // Loops through all the red buttons, and adds event listener "click"
@@ -106,9 +106,11 @@ for (let i =0;i<cardContainers.length;i++){
     cardContainers[i].appendChild(cardBack)
     cardBack.style.height= "300px"
     cardBack.style.width="210px"
-    cardBack.style.display= "none"
-    cardBack.style.backgroundColor='red'
+    cardBack.style.border="5px solid white"
+    cardBack.style.borderRadius="15px"
+    cardBack.style.display= "none"  
     cardFront.style.borderRadius= "15px"
+    cardFront.style.border="5px solid white"
     // Here were are adding images to front 'front' of the div.
     // We are using string interpolation to go through the drink array:"image"
     // and adding backgroundImages
@@ -116,31 +118,155 @@ for (let i =0;i<cardContainers.length;i++){
     cardFront.style.backgroundImage = `url(${drinks[i].image})`
     cardFront.style.backgroundSize = "cover"
     cardFront.style.height= "300px"
+    cardFront.style.width="210px"
     cardFront.style.backgroundPosition= "center"
     cardFront.style.display= "block"
     cardFront.appendChild(cardInformation)
     cardContainers[i].appendChild(cardFront) // cardContainers need [i] because it is an array.
     cardContainers[i].addEventListener("click", cardListener)
 }
+var myTimer;
+   function clock() {
+     myTimer = setInterval(myClock, 1000);
+     var c = 60;
 
-// let musicButton = document.querySelector('.audio-button')
-// console.log(musicButton)
-// musicButton.addEventListener('click',function(){
-//     let pageMusic = document.querySelectorAll("audio")
-//     console.log(pageMusic)
-//     for( let i = 0;i < pageMusic.length;i++){
-//         pageMusic[i].volume = "0.0"
-//     }
-// })
+     function myClock() {
+       document.getElementById("demo").innerHTML = --c;
+       if (c == 0) {
+         clearInterval(myTimer);
+         alert("times up!");
+       }
+     }
+   }
 
-// let unMute = document.querySelector(".audio-button2")
-// console.log(unMute)
-// unMute.addEventListener('click', function(){
-//     let pageMusic = document.querySelectorAll("audio")
-//     console.log(pageMusic)
-//     for( let i = 0;i < pageMusic.length;i++){
-//         pageMusic[i].volume = "0.9"
-//     }
-   
-// })
 
+   var myQuestions = [
+	{
+        question: "What are the correct proportions for an Old Fashioned?",
+        
+		answers: {
+			A: '1.5 ounces Rum, 0.75 ounces of Lime Juice, 0.5 ounces of Simple Syrup',
+			B: '2.0 ounces Whiskey, 0.5 ounces of Simple Syrup, 2 dashes of Bitters',
+			C: '1.5 ounces Gin, 1.0 ounces of sweet vermouth, 2 dashes of Bitters'
+		},
+		correctAnswer: 'b'
+	},
+	{
+		question: "Shaken or Stirred?",
+		answers: {
+			A: 'Shaken',
+			B: 'Stirred'
+		},
+		correctAnswer: 'b'
+    }
+  
+];
+var myQuestions2 = [
+	{
+		question: "What is the correct amount of Spirit, simple, and bitters?",
+		answers: {
+			A: '1.5 ounces Rum, 0.75 ounces of Lime Juice, 0.5 ounces of Simple Syrup',
+			B: '2.0 ounces Whiskey, 0.5 ounces of Simple Syrup, 2 dashes of Bitters',
+			C: '1.5 ounces Gin, 1.0 ounces of sweet vermouth, 2 dashes of Bitters'
+		},
+		correctAnswer: 'b'
+	},
+	{
+		question: "Shaken or Stirred?",
+		answers: {
+			A: 'Shaken',
+			B: 'Stirred'
+		},
+		correctAnswer: 'b'
+    }
+  
+];
+
+var quizContainer = document.getElementById('quiz');    
+var quizContainer2 = document.getElementById('quiz2'); 
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+	function showQuestions(questions, quizContainer){
+		// we'll need a place to store the output and the answer choices
+		var output = [];
+		var answers;
+
+		// for each question...
+		for(var i=0; i<questions.length; i++){
+			
+			// first reset the list of answers
+			answers = [];
+
+			// for each available answer...
+			for(letter in questions[i].answers){
+
+				// ...add an html radio button
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+						+ letter + ': '
+						+ questions[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer.innerHTML = output.join('');
+	}
+
+
+	function showResults(questions, quizContainer, resultsContainer){
+		
+		// gather answer containers from our quiz
+		var answerContainers = quizContainer.querySelectorAll('.answers');
+		
+		// keep track of user's answers
+		var userAnswer = '';
+		var numCorrect = 0;
+		
+		// for each question...
+		for(var i=0; i<questions.length; i++){
+
+			// find selected answer
+			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			// if answer is correct
+			if(userAnswer===questions[i].correctAnswer){
+				// add to the number of correct answers
+				numCorrect++;
+				
+				// color the answers green
+				answerContainers[i].style.color = 'lightgreen';
+			}
+			// if answer is wrong or blank
+			else{
+				// color the answers red
+				answerContainers[i].style.color = 'red';
+			}
+		}
+
+		// show number of correct answers out of total
+		resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+	}
+
+	// show questions right away
+	showQuestions(questions, quizContainer);
+	
+	// on submit, show results
+	submitButton.onclick = function(){
+		showResults(questions, quizContainer, resultsContainer);
+	}
+
+}
