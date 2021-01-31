@@ -125,31 +125,31 @@ for (let i =0;i<cardContainers.length;i++){
     cardContainers[i].appendChild(cardFront) // cardContainers need [i] because it is an array.
     cardContainers[i].addEventListener("click", cardListener)
 }
-var myTimer;
-   function clock() {
-     myTimer = setInterval(myClock, 1000);
-     var c = 60;
+// var myTimer;
+//    function clock() {
+//      myTimer = setInterval(myClock, 1000);
+//      var c = 60;
 
-     function myClock() {
-       document.getElementById("demo").innerHTML = --c;
-       if (c == 0) {
-         clearInterval(myTimer);
-         alert("times up!");
-       }
-     }
-   }
+//      function myClock() {
+//        document.getElementById("demo").innerHTML = --c;
+//        if (c == 0) {
+//          clearInterval(myTimer);
+//          alert("times up!");
+//        }
+//      }
+//    }
 
 
    var myQuestions = [
 	{
-        question: "What are the correct proportions for an Old Fashioned?",
+        question: "What are the correct ingredients for an Old Fashioned?",
         
 		answers: {
 			A: '1.5 ounces Rum, 0.75 ounces of Lime Juice, 0.5 ounces of Simple Syrup',
 			B: '2.0 ounces Whiskey, 0.5 ounces of Simple Syrup, 2 dashes of Bitters',
 			C: '1.5 ounces Gin, 1.0 ounces of sweet vermouth, 2 dashes of Bitters'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'B'
 	},
 	{
 		question: "Shaken or Stirred?",
@@ -157,19 +157,20 @@ var myTimer;
 			A: 'Shaken',
 			B: 'Stirred'
 		},
-		correctAnswer: 'b'
-    }
+		correctAnswer: 'B'
+    }],
   
-];
-var myQuestions2 = [
+
+myQuestions2 = [
 	{
-		question: "What is the correct amount of Spirit, simple, and bitters?",
+        question: "What are the correct ingredients for a Daiquiri?",
+        
 		answers: {
-			A: '1.5 ounces Rum, 0.75 ounces of Lime Juice, 0.5 ounces of Simple Syrup',
+			A: '2.0 ounces Rum, 0.75 ounces of Lime Juice, 0.75 ounces of Simple Syrup',
 			B: '2.0 ounces Whiskey, 0.5 ounces of Simple Syrup, 2 dashes of Bitters',
 			C: '1.5 ounces Gin, 1.0 ounces of sweet vermouth, 2 dashes of Bitters'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'A'
 	},
 	{
 		question: "Shaken or Stirred?",
@@ -177,17 +178,86 @@ var myQuestions2 = [
 			A: 'Shaken',
 			B: 'Stirred'
 		},
-		correctAnswer: 'b'
-    }
-  
-];
+		correctAnswer: 'A'
+    }], 
+myQuestions3 = [
+	{
+        question: "What are the correct ingredients for a Martini?",
+		answers: {
+			A: '2.5 ounces Tequila, ,1.0 ounces Cointreau, 0.75 ounces of Lime Juice, 0.5 ounces of AgaveSyrup',
+			B: '2.0 ounces Gin or Vodka, 1 ounces of dry vermouth, 2 dashes of Orange Bitters',
+			C: '1.5 ounces Rum, 1.0 ounces grapefruit juice, .75 ounces of lime juice, 2 dashes of Bitters'
+		},
+		correctAnswer: 'B'
+	},
+	{
+		question: "Shaken or Stirred?",
+		answers: {
+			A: 'Shaken',
+			B: 'Stirred'
+		},
+		correctAnswer: 'B'
+    }],
+    myQuestions4 = [
+        {
+            question: "What are the correct ingredients for a Tom Collins?",
+            answers: {
+                A: '2.5 ounces Vodka, .5 ounce of lime juice, 0.5 ounces of simple syrup, 0.5 ounce of agave syrup',
+                B: '2.0 ounces Gin, 1.0 ounce of lemon juice, 0.5 ounce of simple syrup, top with club soda',
+                C: '1.5 ounces Bourbon, 0.5 ounce of lime juice, .5 ounce of simple syrup, '
+            },
+            correctAnswer: 'B'
+        },
+        {
+            question: "Shaken or Stirred?",
+            answers: {
+                A: 'Shaken',
+				B: 'Stirred',
+				C: 'Built in Glass'
+            },
+            correctAnswer: 'C'
+		}],
+		myQuestions5 = [
+			{
+				question: "What are the correct ingredients for a Manhattan?",
+				answers: {
+					A: '2.5 ounces, 0.5 ounces of lime juice, 0.5 ounces of simple syrup, 0.5 ounce of agave syrup',
+					B: '1.5 ounces Rum, 1.0 ounces of lemon juice, 0.5 ounce of simple syrup, top with club soda',
+					C: '2.0 ounces Whiskey, 1.0 ounces of sweet vermouth, bitters '
+				},
+				correctAnswer: 'B'
+			},
+			{
+				question: "Shaken or Stirred?",
+				answers: {
+					A: 'Shaken',
+					B: 'Stirred'
+				},
+				correctAnswer: 'B'
+			}]
+;
 
 var quizContainer = document.getElementById('quiz');    
-var quizContainer2 = document.getElementById('quiz2'); 
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+var quizContainer2 = document.getElementById('quiz2');    
+var resultsContainer2 = document.getElementById('results2');
+var submitButton2 = document.getElementById('submit2');
+
+var quizContainer3 = document.getElementById('quiz3');    
+var resultsContainer3 = document.getElementById('results3');
+var submitButton3 = document.getElementById('submit3');
+
+var quizContainer4 = document.getElementById('quiz4');    
+var resultsContainer4 = document.getElementById('results4');
+var submitButton4 = document.getElementById('submit4');
+
+var quizContainer5 = document.getElementById('quiz5');    
+var resultsContainer5 = document.getElementById('results5');
+var submitButton5 = document.getElementById('submit5');
+
+generateQuiz( myQuestions, quizContainer, resultsContainer, submitButton);
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
@@ -267,6 +337,339 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	// on submit, show results
 	submitButton.onclick = function(){
 		showResults(questions, quizContainer, resultsContainer);
+	}
+
+}
+generateQuiz2( myQuestions2, quizContainer2, resultsContainer2, submitButton2);
+
+function generateQuiz2(questions2, quizContainer2, resultsContainer2, submitButton2){
+
+	function showQuestions2(questions2, quizContainer2){
+		// we'll need a place to store the output and the answer choices
+		var output = [];
+		var answers;
+
+		// for each question...
+		for(var i=0; i<questions2.length; i++){
+			
+			// first reset the list of answers
+			answers = [];
+
+			// for each available answer...
+			for(letter in questions2[i].answers){
+
+				// ...add an html radio button
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+						+ letter + ': '
+						+ questions2[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions2[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer2.innerHTML = output.join('');
+	}
+
+
+	function showResults2(questions2, quizContainer2, resultsContainer2){
+		
+		// gather answer containers from our quiz
+		var answerContainers2 = quizContainer2.querySelectorAll('.answers');
+		
+		// keep track of user's answers
+		var userAnswer2 = '';
+		var numCorrect = 0;
+		
+		// for each question...
+		for(var i=0; i<questions2.length; i++){
+
+			// find selected answer
+			userAnswer2 = (answerContainers2[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			// if answer is correct
+			if(userAnswer2===questions2[i].correctAnswer){
+				// add to the number of correct answers
+				numCorrect++;
+				
+				// color the answers green
+				answerContainers2[i].style.color = 'lightgreen';
+			}
+			// if answer is wrong or blank
+			else{
+				// color the answers red
+				answerContainers2[i].style.color = 'red';
+			}
+		}
+
+		// show number of correct answers out of total
+		resultsContainer2.innerHTML = numCorrect + ' out of ' + questions2.length;
+	}
+
+	// show questions right away
+	showQuestions2(questions2, quizContainer2);
+	
+	// on submit, show results
+	submitButton2.onclick = function(){
+		showResults2(questions2, quizContainer2, resultsContainer2);
+	}
+
+}
+
+generateQuiz3( myQuestions3, quizContainer3, resultsContainer3, submitButton3);
+
+function generateQuiz3(questions3, quizContainer3, resultsContainer3, submitButton3){
+
+	function showQuestions3(questions3, quizContainer3){
+		// we'll need a place to store the output and the answer choices
+		var output = [];
+		var answers;
+
+		// for each question...
+		for(var i=0; i<questions3.length; i++){
+			
+			// first reset the list of answers
+			answers = [];
+
+			// for each available answer...
+			for(letter in questions3[i].answers){
+
+				// ...add an html radio button
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+						+ letter + ': '
+						+ questions3[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions3[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer3.innerHTML = output.join('');
+	}
+
+
+	function showResults3(questions3, quizContainer3, resultsContainer3){
+		
+		// gather answer containers from our quiz
+		var answerContainers3 = quizContainer3.querySelectorAll('.answers');
+		
+		// keep track of user's answers
+		var userAnswer3 = '';
+		var numCorrect = 0;
+		
+		// for each question...
+		for(var i=0; i<questions3.length; i++){
+
+			// find selected answer
+			userAnswer3 = (answerContainers3[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			// if answer is correct
+			if(userAnswer3===questions3[i].correctAnswer){
+				// add to the number of correct answers
+				numCorrect++;
+				
+				// color the answers green
+				answerContainers3[i].style.color = 'lightgreen';
+			}
+			// if answer is wrong or blank
+			else{
+				// color the answers red
+				answerContainers3[i].style.color = 'red';
+			}
+		}
+
+		// show number of correct answers out of total
+		resultsContainer3.innerHTML = numCorrect + ' out of ' + questions3.length;
+	}
+
+	// show questions right away
+	showQuestions3(questions3, quizContainer3);
+	
+	// on submit, show results
+	submitButton3.onclick = function(){
+		showResults3(questions3, quizContainer3, resultsContainer3);
+	}
+
+}
+generateQuiz4( myQuestions4, quizContainer4, resultsContainer4, submitButton4);
+
+function generateQuiz4(questions4, quizContainer4, resultsContainer4, submitButton4){
+
+	function showQuestions4(questions4, quizContainer4){
+		// we'll need a place to store the output and the answer choices
+		var output = [];
+		var answers;
+
+		// for each question...
+		for(var i=0; i<questions4.length; i++){
+			
+			// first reset the list of answers
+			answers = [];
+
+			// for each available answer...
+			for(letter in questions4[i].answers){
+
+				// ...add an html radio button
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+						+ letter + ': '
+						+ questions4[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions4[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer4.innerHTML = output.join('');
+	}
+
+
+	function showResults4(questions4, quizContainer4, resultsContainer4){
+		
+		// gather answer containers from our quiz
+		var answerContainers4 = quizContainer4.querySelectorAll('.answers');
+		
+		// keep track of user's answers
+		var userAnswer4 = '';
+		var numCorrect = 0;
+		
+		// for each question...
+		for(var i=0; i<questions4.length; i++){
+
+			// find selected answer
+			userAnswer4 = (answerContainers4[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			// if answer is correct
+			if(userAnswer4===questions4[i].correctAnswer){
+				// add to the number of correct answers
+				numCorrect++;
+				
+				// color the answers green
+				answerContainers4[i].style.color = 'lightgreen';
+			}
+			// if answer is wrong or blank
+			else{
+				// color the answers red
+				answerContainers4[i].style.color = 'red';
+			}
+		}
+
+		// show number of correct answers out of total
+		resultsContainer4.innerHTML = numCorrect + ' out of ' + questions4.length;
+	}
+
+	// show questions right away
+	showQuestions4(questions4, quizContainer4);
+	
+	// on submit, show results
+	submitButton4.onclick = function(){
+		showResults4(questions4, quizContainer4, resultsContainer4);
+	}
+}
+
+generateQuiz5( myQuestions5, quizContainer5, resultsContainer5, submitButton5);
+
+function generateQuiz5(questions5, quizContainer5, resultsContainer5, submitButton5){
+
+	function showQuestions5(questions5, quizContainer5){
+		// we'll need a place to store the output and the answer choices
+		var output = [];
+		var answers;
+
+		// for each question...
+		for(var i=0; i<questions5.length; i++){
+			
+			// first reset the list of answers
+			answers = [];
+
+			// for each available answer...
+			for(letter in questions5[i].answers){
+
+				// ...add an html radio button
+				answers.push(
+					'<label>'
+						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+						+ letter + ': '
+						+ questions5[i].answers[letter]
+					+ '</label>'
+				);
+			}
+
+			// add this question and its answers to the output
+			output.push(
+				'<div class="question">' + questions5[i].question + '</div>'
+				+ '<div class="answers">' + answers.join('') + '</div>'
+			);
+		}
+
+		// finally combine our output list into one string of html and put it on the page
+		quizContainer5.innerHTML = output.join('');
+	}
+
+
+	function showResults5(questions5, quizContainer5, resultsContainer5){
+		
+		// gather answer containers from our quiz
+		var answerContainers5 = quizContainer5.querySelectorAll('.answers');
+		
+		// keep track of user's answers
+		var userAnswer5 = '';
+		var numCorrect = 0;
+		
+		// for each question...
+		for(var i=0; i<questions5.length; i++){
+
+			// find selected answer
+			userAnswer5 = (answerContainers5[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+			
+			// if answer is correct
+			if(userAnswer5===questions5[i].correctAnswer){
+				// add to the number of correct answers
+				numCorrect++;
+				
+				// color the answers green
+				answerContainers5[i].style.color = 'lightgreen';
+			}
+			// if answer is wrong or blank
+			else{
+				// color the answers red
+				answerContainers5[i].style.color = 'red';
+			}
+		}
+
+		// show number of correct answers out of total
+		resultsContainer5.innerHTML = numCorrect + ' out of ' + questions5.length;
+	}
+
+	// show questions right away
+	showQuestions5(questions5, quizContainer5);
+	
+	// on submit, show results
+	submitButton5.onclick = function(){
+		showResults5(questions5, quizContainer5, resultsContainer5);
 	}
 
 }
