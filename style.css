@@ -1,68 +1,60 @@
-body{
-    background-image: url("./barbackground.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-shadow: 10px 10px 15px red;
-    font-family: 'Tauri', sans-serif;
-
+body {
+  background-image: url("./barback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 10px 10px 15px red;
+  font-family: "Tauri", sans-serif;
 }
 h1 {
-    text-align: center;
-    color: white
-
+  text-align: center;
+  color: white;
 }
 p {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 .button-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.welcome-container {
+  border: 20px solid black;
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+@media screen and (max-width: 375.98px) {
+  body {
+    background-repeat: repeat;
+    text-shadow: 10px 10px 15px red;
+    display: block;
+    font-family: "Tauri", sans-serif;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  p {
+    color: white;
+    text-align: center;
+  }
+  .button-container {
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
-    
-}
-.welcome-container {
+  }
+  .welcome-container {
     border: 20px solid black;
-    width: 200px;
-    height: 150px;
     margin: 0 auto;
     margin-top: 200px;
-    
-    
-}
-@media screen and (max-width: 375.98px) {
-    body{
-        background-repeat: repeat;
-        text-shadow: 10px 10px 15px red;
-        display: block;
-        font-family: 'Tauri', sans-serif;
-        
-    }
-    h1 {
-        text-align: center;
-        color: white
-    
-    }
-    p {
-        color: white;
-        text-align: center;
-    }
-    .button-container {
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        
-    }
-    .welcome-container {
-        border: 20px solid black;
-        margin: 0 auto;
-        margin-top: 200px;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
 }
