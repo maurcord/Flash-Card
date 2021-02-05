@@ -226,7 +226,7 @@ myQuestions3 = [
 					B: '1.5 ounces Rum, 1.0 ounces of lemon juice, 0.5 ounce of simple syrup, top with club soda',
 					C: '2.0 ounces Whiskey, 1.0 ounces of sweet vermouth, bitters '
 				},
-				correctAnswer: 'B'
+				correctAnswer: 'C'
 			},
 			{
 				question: "Shaken or Stirred?",
